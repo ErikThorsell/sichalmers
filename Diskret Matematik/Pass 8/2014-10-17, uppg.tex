@@ -1,0 +1,99 @@
+%SI 2014-09-05
+
+\documentclass{article}
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[swedish]{babel}
+\usepackage{fullpage}
+\usepackage{amssymb}
+\usepackage{bussproofs}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage{verbatim}
+\usepackage{tikz}
+\let\emptyset\varnothing
+
+
+\title{Supplemental Instructions}
+\author{Erik Thorsell \\ 
+		\small{erithor@student.chalmers.se}
+}
+\date{2014-10-24}
+
+\begin{document}
+\maketitle
+
+\section*{Tentakött!}
+
+\begin{enumerate}
+
+\item[1.]
+Betrakta mängden $V$ med $n$ element.
+\begin{itemize}
+    \item[a)] För ett positivt heltal $k < \binom{n}{2}$, hur många grafer med 
+              $V$ som nodmängd och med $k$ kanter kan man bilda?\\
+              {\it (Kom ihåg att en graf saknar öglor och multipla kanter.)}
+    \item[b)] På hur många olika sätt kan man bilda en fullständig bipartit 
+              graf med $V$ som nodmängd?
+    \item[c)] På hur många sätt kan man bilda en {\it n-väg} med $V$ som 
+              nodmängd?
+    \item[d)] På hur många sätt kan man bilda en {\it n-cykel} med $V$ som 
+              nodmängd?
+\end{itemize}
+{\it Tentamen 2003-10-23}\\
+\\
+\item[2.]
+    För vilka heltal $n$ gäller att $$21|n^8 - 7n^5 + 6n^3 + 4$$
+{\it Tentamen 2003-10-23}\\
+\\
+\item[3.]
+\begin{itemize}
+    \item[a)] Antag att $n$ olika bollar ska fördelas på tre urnor på så sätt 
+              att i de tre urnorna ska det finnas $k$, $l$, respektive $m$ 
+              bollar. På hur många sätt kan det ske?
+    \item[b)] Låt $a,b,c \in \mathbb{R}$ och $n \in \mathbb{Z}_{+}$. Som 
+              bekant säger binomialsatsen att $$(a+b)^n = \sum_{(k,l):k+l=n} 
+              \binom{n}{k}a^kb^l$$
+              På liknande sätt gäller att $$(a+b+c)^n = \sum_{(k,l,m):k+l+m=n} 
+              A(k,l,m)a^kb^lc^m$$
+              Fråga: Vad är $A(k,l,m)?$\\
+\end{itemize}
+{\it Tentamen 2004-01-16}\\
+\\
+\item[4.]
+    Visa att antalet följder av längd $n$, $n=1,2,3,...$, av nollor och ettor, 
+    som innehåller ett udda antal ettor är $2^{n-1}$.
+
+{\it Tentamen 2005-01-11}\\
+\\
+\item[5.]
+    Följden $f_1, f_2, f_3,...$ är given av att $f_1=1$ och att det för $n \ge 
+    2$ gäller att $f_n = \sqrt{1+f^2_{n-1}}$.\\
+    Visa att det för alla $n$ gäller att $f_n = \sqrt{n}$.\\
+{\it Tentamen 2004-12-17}\\
+
+\item[6.]
+    Låt $f_n$ vara antalet följder av längd $n$ av talen 1, 2 och 3 sådana att 
+    det aldrig står en etta omedelbart före en tvåa.\\
+    Finn en rekursiv formel för följden $f_1, f_2, f_3,...$.\\
+{\it Tentamen 2004-12-17}\\
+
+\item[7.]
+    Låt $G=(V,E)$ vara en graf och låt $R$, $S$ och $T$ vara relationer på $V$ 
+    givna att:
+    \begin{itemize}
+        \item[$\bullet$] $xRy$ om $x$ och $y$ är grannar.
+        \item[$\bullet$] $xSy$ om $x$ och $y$ ligger i samma sammanhängande 
+                       komponent.
+        \item[$\bullet$] $xTy$ om $d_{x} \leq d_{y}$.
+    \end{itemize}
+    Vilka av relationerna $R$, $S$ och $T$ är ekvivalensrelationer?\\
+{\it Tentamen 2005-08-16}\\
+\\
+\item[8.]
+    Bevisa att man kan dela med noll.
+
+
+\end{enumerate}
+\end{document}

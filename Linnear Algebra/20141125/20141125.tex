@@ -1,0 +1,121 @@
+%SI 2014-09-05
+
+\documentclass{article}
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[swedish]{babel}
+\usepackage{fullpage}
+\usepackage{amssymb}
+\usepackage{bussproofs}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage{verbatim}
+\usepackage{tikz}
+\let\emptyset\varnothing
+
+
+\title{Supplemental Instructions}
+\author{Benjamin Eriksson \& Erik Thorsell \\ 
+		\small{beneri@student.chalmers.se} \&
+		\small{erithor@student.chalmers.se}
+}
+\date{
+      %Place date here!
+     }
+
+\begin{document}
+\maketitle
+
+
+\section*{Repetition}
+Låt f vara en linjär avbildning i planet som uppfyller:
+\[
+	f \bigg (  
+    \begin{pmatrix}
+    2		\\
+    1		\\
+    \end{pmatrix}  
+	\bigg )   
+	= 
+	\begin{pmatrix}
+    8		\\
+    10		\\
+    \end{pmatrix}    
+    \qquad 
+	och
+	\qquad
+    f \bigg (  
+    \begin{pmatrix}
+    4		\\
+    -3		\\
+    \end{pmatrix}  
+	\bigg )   
+	= 
+	\begin{pmatrix}
+    -4		\\
+    2		\\
+    \end{pmatrix}   	
+\]
+Bestäm matrisen A som är sådan att $f = f_A$, dvs matrisavbildningen map A.
+
+\section*{Area och Volymförändringar}
+\subsection*{1.}
+Låt $P=(1,2)$, $Q=(3,4)$, $R=(-1,6)$.
+\begin{itemize}
+    \item[a) ] Vad är arean av triangeln $\bigtriangleup PQR$?
+    \item[b) ] Låt $f$ vara den linjära avbildningen med matrisen: 
+               $$\begin{bmatrix}
+               2  & 3 \\
+               8  & 2
+               \end{bmatrix}$$
+               Vad är arean av bilden $f(\bigtriangleup PQR)$, av triangeln 
+               $\bigtriangleup PQR$?
+\end{itemize}
+
+\section*{Affina avbildningar}
+\subsection*{2.}
+Bestäm en matris $A$ och en vektor ${\bf b}$ så att den affina avbildning $f$ 
+som är spegling av punkterna i rummet i planet som ges av $y=1$ ges av: 
+$$f({\bf x})=A{\bf x}+{\bf b}$$
+
+\section*{Geometrin hos linjära avbildningar}
+\subsection*{3.}
+\begin{itemize}
+\item[a) ] Bestäm matrisen för den linjära avbildningen i planet som ges av spegling i linjen $y = kx$ där 
+$k \in R$
+\item[b) ] Var skulle vektorn $v = (3, 7)$ avbildas om $y = 2x$? 
+\end{itemize}
+
+\section*{Sammansatta avbildningar}
+\subsection*{4.}
+\begin{itemize}
+\item[a) ] Bestäm matrisen $A$ för den linjära avbildningen i planet som består av en rotation av pi/6 radianer moturs kring origo.
+\item[b) ] Bestäm matrisen $B$ för den linjära avbildningen i planet som ges av spegling i linjen y = x.
+\item[c) ] Bestäm också matrisen för rotationen i a) följt av speglingen i b).
+\end{itemize}
+
+
+\section*{Matriser i $n$ dimensioner}
+\subsection*{5}
+Visa att matrisen för spegling i linje $L$ med riktningsvektor $\mathbf{v}$ i 
+$\mathbb{R}^n$ ges av $$A = \frac{2}{\parallel \mathbf{v}^2 \parallel}
+(\mathbf{v} \mathbf{v}^t)-I$$
+
+\section*{Linjära Ekvationssytem}
+\subsection*{6}
+Skriv ekvationssystemet 
+\begin{equation}
+    \begin{cases}
+                    x+2y-z=3 \\
+                    2x+2y-z=4 \\
+                    2x+5y+2z=2
+    \end{cases}
+\end{equation} 
+\noindent
+\begin{itemize}
+    \item[a) ] som en matrisekvation $A \mathbf{x} = \mathbf{b}$.
+    \item[b) ] Lös ekvationssystemet mha Gausselimination.
+\end{itemize}
+
+\end{document}

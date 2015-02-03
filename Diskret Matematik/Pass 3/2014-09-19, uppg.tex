@@ -1,0 +1,100 @@
+%SI 2014-09-05
+
+\documentclass{article}
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[swedish]{babel}
+\usepackage{fullpage}
+\usepackage{amssymb}
+\usepackage{bussproofs}
+
+\let\emptyset\varnothing
+
+\title{Supplemental Instructions}
+\author{Erik Thorsell \\ 
+		\small{erithor@student.chalmers.se}
+}
+\date{2014-09-19}
+
+\begin{document}
+\maketitle
+
+\subsection*{Repetition}
+Repetition är moder till all inlärning.
+\begin{enumerate}
+
+\item[1.]
+En relation $R$ på en mängd $A$ kallas, som bekant:
+\begin{itemize}
+\item Reflexiv om $\forall x : xRx$
+\item Symmetrisk om $\forall x : xRy \Rightarrow yRx$
+\item Transitiv om $\forall x : xRy \wedge yRz \Rightarrow xRz$
+\end{itemize}
+Ge exempel på en relation som är:
+\begin{itemize}
+\item[a)] En ekvivalensrelation
+\item[b)] Transitiv, men inte reflexiv eller symmetrisk
+\item[c)] Symmetrisk, men inte reflexiv eller transitiv
+\end{itemize}
+{\it Tenta 030820}
+
+\item[2.]
+En funktion $f : \mathbb{R} \rightarrow \mathbb{R}$ kallas växande om det så fort 
+$x < y$ gäller att $f(x) \leq f(y)$. Om det för alla sådana $x$ och $y$ dessutom 
+gäller att $f(x) < f(y)$, kallas $f$ {\it strikt/strängt växande}.
+\begin{itemize}
+\item[a)] Visa att en strikt växande funktion alltid är injektiv.
+\item[b)] Ge ett exempel på en funktion som är växande, men inte injektiv.
+\end{itemize}
+{\it Tenta 050330}
+
+\end{enumerate}
+
+\subsection*{Induktion}
+\begin{enumerate}
+\item[3.] 
+Visa att för alla $n \in \mathbb{Z+}$ gäller att: 
+\[\sum\limits_{k=1}^{n} 3k(k-1)+1=n^3\] 
+{\it Tenta 021024}
+
+\item[4.]
+Visa att det för alla udda positiva heltal $n$ gäller att:
+\[1+3+5+7+9+...+n=(\frac{n+1}{2})^2\] 
+{\it Tenta 041217}
+
+\item[5.]
+Visa att det för alla postiva heltal $n$ gäller att:
+\[\sum\limits_{k=1}^{n} \frac{k}{3^k}=\frac{3}{4}-\frac{2n+3}{4*3^n}\]
+{\it Tenta 051216}
+\end{enumerate}
+
+\subsection*{Rekursion}
+\begin{enumerate}
+
+\item[6.]
+Fakultet är en funktion inom matematiken. För ett heltal större än noll är fakulteten 
+lika med produkten av alla heltal från 1 upp till och med talet självt.\\
+
+Låt $f(x)=x!$ Definiera $f(x)$ rekursivt.
+
+\item[7.]
+Fibonaccis talserie är ytterligare ett exempel på något inom matematiken som kan definieras rekursivt.
+Visserligen går den även att definiera icke-rekursivt:
+\[F(n)=\frac{(1+\sqrt{5})^n-(1-\sqrt{5})^n}{\sqrt{5}*2^n}\]
+men hur kul är det? \\
+
+Definiera $F(n)$ rekursivt.
+
+\end{enumerate}
+
+\subsection*{Summor}
+\begin{enumerate}
+\item[8.]
+Beräkna följande summor: 
+\begin{itemize}
+\item[a)] $\sum\limits_{k=1}^{7} 5^k$
+\item[b)] $\frac{1}{3}+\frac{2}{9}+\frac{4}{27}+...+\frac{64}{2187}$
+\end{itemize}
+\end{enumerate}
+\end{doQcument}

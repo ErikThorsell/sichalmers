@@ -1,0 +1,134 @@
+%SI 2014-09-05
+
+\documentclass{article}
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[swedish]{babel}
+\usepackage{fullpage}
+\usepackage{amssymb}
+\usepackage{bussproofs}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage{verbatim}
+\usepackage{tikz}
+\let\emptyset\varnothing
+
+
+\title{Supplemental Instructions}
+\author{Benjamin Eriksson \& Erik Thorsell \\ 
+		\small{beneri@student.chalmers.se} \&
+		\small{erithor@student.chalmers.se}
+}
+\date{
+      %Place date here!
+     }
+
+\begin{document}
+\maketitle
+
+
+\section*{Repetition}
+\begin{itemize}
+\item[a) ] När är skalärprodukten av två vektorer störst?
+\item[b) ] När är vektorprodukten av två vektorer störst?
+\item[c) ] Vad krävs för att en matris ska ha en invers?
+\item[d) ] Vad kan sägas om determinanten hos en matris som har en hel rad nollor?
+\item[e) ] Vad är volymen av parallellpipeden som spänns upp av $\mathbf{u}$, $\mathbf{v}$, $\mathbf{w}$? 
+\item[f) ] Vad krävs för att en avbildning f ska vara linjär?
+\end{itemize}
+
+
+\section*{Linjära ekvationssystem}
+\subsection*{1}
+Är de tre vektorerna
+$$
+\begin{bmatrix}
+    1 \\
+    2 \\
+    2 \\
+\end{bmatrix}
+,
+\begin{bmatrix}
+    2 \\
+    2 \\
+    5 \\
+\end{bmatrix}
+och
+\begin{bmatrix}
+    -1 \\
+    -1 \\
+     2 \\
+\end{bmatrix}
+$$
+linjärt oberoende? Utgör de en bas för $\mathbb{R}^3$? {\bf Motivera!}
+
+\subsection*{2}
+Motivera att alla lösningar till ekvationssystemet $A \mathbf{x} = 0$ där 
+$$ A = 
+\begin{bmatrix}
+    1  &  2  &  1  & -1  &  2 \\
+    3  &  4  &  5  &  2  &  0 \\
+    2  &  2  &  1  &  0  &  2 \\
+\end{bmatrix}
+$$
+utgör ett plan i $\mathbb{R}^5$ och bestämt en ekvation på parameterform för 
+detta plan.
+
+\section*{Affina avbildningar}
+\subsection*{3}
+Hitta $A$ och $\mathbf{b}$ för den affina avbildningen $y = A\mathbf{x} + \mathbf{b}$ som 
+speglar en punkt i linjen $y = 3x + 2$.
+\\
+\textit{Hint: }
+Spegling i linjen $y = kx$ ges av matrisen: 
+$
+\frac{1}{1+k^2}
+\begin{pmatrix}
+	1	&	k \\
+	k	&	k^2 \\
+\end{pmatrix}
+$
+
+\section*{Invers}
+\subsection*{4}
+Beräkna $A^{-1}$
+$$ A =
+\begin{bmatrix}
+    1 & -2 & 0 \\
+    0 &  1 & 1 \\
+    2 &  0 & 1 \\
+\end{bmatrix}
+$$
+\section*{Determinanter}
+\subsection*{5}
+Bestäm determinanten till följande matris.
+$$
+\begin{bmatrix}
+    1  & 1   &  0   &  1 \\
+    2  & 8   &  -1  &  2  \\
+    4  & -4  &  0   &  3   \\
+    8  &  2  &  1   &  4   \\
+\end{bmatrix}
+$$
+
+\subsection*{6}
+Avgör vilka av följande matriser som är inverterbara genom att bestämma 
+determinannten.
+$$
+a)
+\begin{bmatrix}
+    -1 & 2 & 3 \\
+     4 &-3 & 2 \\
+     0 & 1 & 6 \\
+\end{bmatrix}
+\qquad
+b)
+\begin{bmatrix}
+    3 & -2 & 8 \\
+    7 &  0 & 1 \\
+    4 &  4 & 3 \\
+\end{bmatrix}
+$$
+
+\end{document}

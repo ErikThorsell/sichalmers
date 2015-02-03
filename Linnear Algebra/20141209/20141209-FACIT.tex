@@ -1,0 +1,262 @@
+%SI 2014-09-05
+
+\documentclass{article}
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[swedish]{babel}
+\usepackage{fullpage}
+\usepackage{amssymb}
+\usepackage{bussproofs}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage{verbatim}
+\usepackage{tikz}
+\let\emptyset\varnothing
+
+
+\title{Supplemental Instructions}
+\date{
+      %Place date here!
+     }
+
+\begin{document}
+\maketitle
+
+\section*{Repetition}
+\begin{itemize}
+\item[a) ] Skalärprodukten är störst då vektorerna pekar i samma riktning.
+\item[b) ] Vektorprodukten är störst då vektorerna är ortogonala.
+\item[c) ] Kvadratisk och nollskild determinant.
+\item[d) ] Determinanten är lika med 0.
+\item[e) ] $\mathbf{u} \cdot (\mathbf{v} \times \mathbf{w})$
+\item[f) ] $f_{A}(c\vec{u} + d\vec{v}) = c f_{A}(\vec{u}) + d f_{A}(\vec{v})$
+
+\end{itemize}
+
+
+\section*{1}
+Genom att beräkna determinanten av matrisen med de tre vektorerna som rader 
+ser vi att denna är nollskiljd. Detta är fallet {\bf om och endast om} 
+vektorerna är linjärt oberoende.
+
+
+\section*{2}
+$$
+\begin{bmatrix}
+    1  &  2  &  1  & -1  &  2 \\
+    3  &  4  &  5  &  2  &  0 \\
+    2  &  2  &  1  &  0  &  2 \\
+\end{bmatrix} \rightarrow 
+\begin{bmatrix}
+    1  &  2  &  1  & -1  &  2 \\
+    0  & -2  &  2  &  5  & -6 \\
+    0  & -2  & -1  &  2  & -2 \\
+\end{bmatrix} \rightarrow
+\begin{bmatrix}
+    1  &  2  &  1  & -1  &  2 \\
+    0  & -2  &  2  &  5  & -6 \\
+    0  &  0  & -3  & -3  &  4 \\
+\end{bmatrix} \rightarrow
+$$
+
+$$
+\begin{bmatrix}
+    1  &  2  &  1  & -1  &  2 \\
+    0  &  1  & -1  &  \frac{-5}{2}  & 3 \\
+    0  &  0  &  1  &  1  &  \frac{-4}{3} \\
+\end{bmatrix} \rightarrow
+\begin{bmatrix}
+    1  &  0  &  3  & 4  &  -4 \\
+    0  &  1  & -1  &  \frac{-5}{2}  & 3 \\
+    0  &  0  &  1  &  1  &  \frac{-4}{3} \\
+\end{bmatrix} \rightarrow
+\begin{bmatrix}
+    1  &  0  &  0  &  1  &  0 \\
+    0  &  1  &  0  &  \frac{-3}{2}  & \frac{5}{3} \\
+    0  &  0  &  1  &  1  &  \frac{-4}{3} \\
+\end{bmatrix}
+$$
+
+\noindent
+Från detta får vi en lösning med två fria parametrar och alltså geometrisk ett 
+plan i $\mathbb{R}^5$. En parametrisering av planet ges av:
+$$
+\mathbf{x} = s
+\begin{bmatrix}
+    -1 \\
+    3/2 \\
+    -1 \\
+    1 \\
+    0 \\
+\end{bmatrix}
++ t
+\begin{bmatrix}
+    0 \\
+    -5/3 \\ 
+    4/3 \\
+    0 \\
+    1 \\
+\end{bmatrix}
+$$
+\section*{3}
+Vi kan skriva avbildningen som $f(x) = t_u \circ S \circ t_{-u} = t_u (S ( t_{-u} ) )$, där S är den linjära speglingsmatrisen för $y = 3x$ och $u$ vår förskjutning från origo. I det här fallet är allt flyttat
+upp två steg och därför är 
+$
+u =
+\begin{pmatrix}
+	0 \\
+	2 
+\end{pmatrix}
+$   \\
+S vet vi är 
+$
+\frac{1}{10}
+\begin{pmatrix}
+	1	&	3 \\
+	3	&	9 \\
+\end{pmatrix}
+$. 
+Så nu stoppar vi in allt i formeln.
+$$
+f(x) =  t_u (S ( t_{-u} ) ) =  t_u (S ( x - u ) ) = t_u ( Sx - Su  ) = Sx - Su + u
+$$
+Här ser vi att $A = S$ och $\mathbf{b}  = -Su + u$. 
+$$
+\mathbf{b}  = 
+-Su + u = 
+\frac{1}{10}
+\begin{pmatrix}
+	1	&	3 \\
+	3	&	9 \\
+\end{pmatrix}
+\cdot
+\begin{pmatrix}
+	0 \\
+	2 \\
+\end{pmatrix}
++
+\begin{pmatrix}
+	0 \\
+	2 \\
+\end{pmatrix}
+=
+\frac{1}{5}
+\begin{pmatrix}
+	-3 \\
+	1 \\
+\end{pmatrix}
+$$
+\\
+Svar: 
+$A = 
+\frac{1}{10}
+\begin{pmatrix}
+	1	&	3 \\
+	3	&	9 \\
+\end{pmatrix}
+$
+, 
+\qquad
+$\mathbf{b} = 
+\frac{1}{5}
+\begin{pmatrix}
+	-3 \\
+	1 \\
+\end{pmatrix}
+$
+
+
+\section*{4}
+$$
+\begin{bmatrix}
+    1 & -2 & 0 & 1 & 0 & 0\\
+    0 &  1 & 1 & 0 & 1 & 0\\
+    2 &  0 & 1 & 0 & 0 & 1\\
+\end{bmatrix}
+\rightarrow
+\begin{bmatrix}
+    1 & -2 & 0 & 1 & 0 & 0\\
+    0 &  1 & 1 & 0 & 1 & 0\\
+    0 &  4 & 1 & -2 & 0 & 1\\
+\end{bmatrix}
+\rightarrow
+\begin{bmatrix}
+    1 & -2 & 0 & 1 & 0 & 0\\
+    0 &  1 & 1 & 0 & 1 & 0\\
+    0 &  0 & -3 & -2 & -4 & 1\\
+\end{bmatrix}
+\rightarrow
+$$
+
+$$
+\begin{bmatrix}
+    1 & -2 & 0 & 1 & 0 & 0\\ 
+    0 &  1 & 0 & -2/3 & -1/3 & 1/3\\
+    0 &  0 & -3 & -2 & -4 & 1\\
+\end{bmatrix}
+\rightarrow
+\begin{bmatrix}
+    1 &  0 & 0 & -1/3 & -2/3 & 2/3 \\
+    0 &  1 & 0 & -2/3 & -1/3 & 1/3\\
+    0 &  0 & 1 &  2/3 & 4/3  & -1/3\\
+\end{bmatrix}$$
+
+WOHO!
+
+\section*{5}
+Tanken är att skriva matrisen på övertriangulär form för att sedan multiplicera diagonalen.
+\\
+$R_i$ beteckna rad i.\\
+
+$$
+\begin{bmatrix}
+    1  & 1   &  0   &  1 \\
+    2  & 8   &  -1  &  2  \\
+    4  & -4  &  0   &  3   \\
+    8  &  2  &  1   &  4   \\
+\end{bmatrix}
+$$
+
+$R_1 * (-2) + R_2 \rightarrow R_2$, \quad
+$R_1 * (-4) + R_3 \rightarrow R_3$, \quad
+$R_4 * (-8) + R_4 \rightarrow R_4$   
+
+
+$$
+\begin{bmatrix}
+    1  & 1   &  0   &  1 \\
+    0  & 6   &  -1  &  0  \\
+    0  & -8  &  0   &  -1   \\
+    0  &  -6  &  1   &  -4   \\
+\end{bmatrix}
+$$
+
+$R_2 * (8/6) + R_3 \rightarrow R_3$, \quad
+$R_2 * (1) + R_4 \rightarrow R_4$   
+
+$$
+\begin{bmatrix}
+    1  & 1   &  0   &  1 \\
+    0  & 6   &  -1  &  0  \\
+    0  & 0   &  -4/3   &  -1   \\
+    0  & 0   &  0   &  -4   \\
+\end{bmatrix}
+$$
+$1 \cdot 6 \cdot -4/3 \cdot -4 = 32$
+
+\section*{6}
+\[ det \left| \begin{array}{ccc}
+    -1 & 2 & 3 \\
+     4 &-3 & 2 \\
+     0 & 1 & 6 \\
+\end{array} \right| = -16 \]
+
+\[ det \left| \begin{array}{ccc}
+     3 & -2  & 8 \\
+     7 &  0  & 1 \\
+     4 &  4  & 3 \\
+\end{array} \right| = 246 \]
+Det finns invers till matriserna, ty determinanten $\neq$ 0.
+
+\end{document}

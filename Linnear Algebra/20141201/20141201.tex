@@ -1,0 +1,131 @@
+%SI 2014-09-05
+
+\documentclass{article}
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[swedish]{babel}
+\usepackage{fullpage}
+\usepackage{amssymb}
+\usepackage{bussproofs}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage{verbatim}
+\usepackage{tikz}
+\let\emptyset\varnothing
+
+
+\title{Supplemental Instructions}
+\author{Benjamin Eriksson \& Erik Thorsell \\ 
+		\small{beneri@student.chalmers.se} \&
+		\small{erithor@student.chalmers.se}
+}
+\date{
+      %Place date here!
+     }
+
+\begin{document}
+\maketitle
+
+
+\section*{Repetition}
+Dra streck mellan koncept som hänger ihop. \\
+\setlength{\tabcolsep}{50pt}
+\renewcommand{\arraystretch}{2.0}
+\begin{tabular}{ r l }
+  $ad-bc$  			 						& Spegling i y=x\\
+  $\sqrt{v_{1}^2 + v_{2}^2 + ...}$ 			& Projektion  \\
+  $f_{A}(c\vec{u} + d\vec{v}) = c f_{A}(\vec{u}) + d f_{A}(\vec{v})$ 	& Determinant av 2x2 matris \\
+  $B = \big( f(e_x) \quad f(e_y) \quad f(e_z) \big)$   					& Identitetsmatris \\
+  $||u \times v||$ 							& Spegling i y-axeln \\
+  $\frac{u \cdot v}{u \cdot u} u$			& Längd av vektor \\
+  $\big( e_x \quad e_y \big)$ 				& Minsta kvadratlösning \\
+  $\big( e_y \quad e_x \big)$ 				& Linjär avbildning \\
+  $A^t A x = A^t b$ 						& Basbyte \\
+  \renewcommand{\arraystretch}{1.0}  
+  $
+  \begin{bmatrix}
+    1  &  0  \\
+    0  &  -1  
+  \end{bmatrix}
+  $ 										& Area av parallellogram \\
+  
+\end{tabular}
+\renewcommand{\arraystretch}{1.0}  
+
+\section*{Linjära ekvationssystem}
+
+\subsection*{1}
+Avgör för varje värde på parametern $a$ hur många lösningar ekvationssystemet
+\begin{equation}
+    \begin{cases}
+                    x-2y+az = 1 \\
+                    x-ay+2x = 1 \\
+                    ax - 4y + 4z = 2
+    \end{cases}
+\end{equation} 
+har. Bestäm alla lösningar i de fall då ekvationssystemet inte har entydlig lösning. (Tentamen 2013-04-05)
+
+\subsection*{2}
+Bestäm den räta linjen som i minsta-kvadratmening är bäst anpassad till punkterna: (1, 3/2), (2,8) och (3, 11/2).
+
+\subsection*{3}
+Motivera att alla lösningar till ekvationssystemet $A \mathbf{x} = 0$ där 
+$$ A = 
+\begin{bmatrix}
+    1  &  2  &  1  & -1  &  2 \\
+    3  &  4  &  5  &  2  &  0 \\
+    2  &  2  &  1  &  0  &  2 \\
+\end{bmatrix}
+$$
+utgör ett plan i $\mathbb{R}^5$ och bestämt en ekvation på parameterform för 
+detta plan.
+
+\subsection*{4}
+Bestäm alla lösningar till ekvationssytemet $A \mathbf{x}= \mathbf{b}$ för 
+följande totalmatris.
+$$ T = 
+\begin{bmatrix}
+    5  &  7  &  1  &  3  &  2 \\
+    3  & -4  &  5  &  2  &  0 \\
+    2  &  3  &  0  &  3  &  2 \\
+    0  &  0  &  0  &  0  &  3 \\
+\end{bmatrix}
+$$
+
+\subsection*{5}
+Bestäm determinanten till följande matris.
+$$
+\begin{bmatrix}
+    1  & 1   &  0   &  1 \\
+    2  & 8   &  -1  &  2  \\
+    4  & -4  &  0   &  3   \\
+    8  &  2  &  1   &  4   \\
+\end{bmatrix}
+$$
+
+
+\subsection*{6}
+Är de tre vektorerna
+$$
+\begin{bmatrix}
+    1 \\
+    2 \\
+    2 \\
+\end{bmatrix}
+,
+\begin{bmatrix}
+    2 \\
+    2 \\
+    5 \\
+\end{bmatrix}
+och
+\begin{bmatrix}
+    -1 \\
+    -1 \\
+     2 \\
+\end{bmatrix}
+$$
+linjärt oberoende? Utgör de en bas för $\mathbb{R}^3$? {\bf Motivera!}
+
+\end{document}

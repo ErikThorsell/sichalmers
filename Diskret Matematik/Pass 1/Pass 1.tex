@@ -1,0 +1,75 @@
+%SI 2014-09-05
+
+\documentclass{article}
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[swedish]{babel}
+\usepackage{fullpage}
+
+
+\title{Supplemental Instructions}
+\author{Erik Thorsell \\ 
+		\small{erithor@student.chalmers.se}
+}
+\date{2014-09-05}
+
+\begin{document}
+\maketitle
+
+\subsection*{Logik}
+Matematiken byggs upp av {\it axiom}. Dessa fundamentala sanningar används som en bas vilken man sedan bygger ifrån. Ett exempel på axiom är {\it att det för alla objekt a gäller att a = a} och ett annat är {\it att det för alla objekt a och b gäller att om a=b, så är även b=a}. Basic, men extremt viktigt!\\
+Det första vi stöter på i kursen, efter axiom, är utsagor och senare även satslogik. Satslogik är ett logiskt system vilket används för att hantera olika satser, vilka i sin tur uttrycker påståenden. Utifrån dessa kan sedan slutsatser dras.
+ 
+\begin{enumerate}
+\item  Givet att: {\bf p} och {\bf q} är {\it utsagor} (ni får själva sätta ord till dessa), använd de logiska operatorerna för {\it konjunktion}, {\it disjunktion} och {\it negation} för att bilda satslogiska exempel.
+\item Med hjälp av en sanningstabell: Definiera de tre tidigare nämnda operatorerna.
+\item Givet utsagorna: {\bf p}, {\bf q}, {\bf r}: Avgör sanningsvärdet hos den logiska formeln $\neg p \lor (q \land r)$ samt $p \land \neg q \lor r$ för alla värden på p, q och r. \\
+{\it Tänk på prioritetsordningen.} (s. 8)
+\end{enumerate}
+
+Tautologier är sanna oavsett sanningsvärdena på dess olika variabler. $p \lor \neg p$ är ett exempel på just ett sådant fall. Ett lite mer komplicerat fall återfinns på s. 10 i boken. {\it (Bläddra inte dit än! Det står nedanför...)}
+
+\begin{enumerate}
+\item[4.] Är följande en tautologi: $(p \land (p \rightarrow q)) \rightarrow q$ ?
+\item[5.] Är följande en tautologi: $((A \rightarrow B) \land (B \rightarrow C)) \rightarrow (A \rightarrow C)$ ?
+\item[6.] Är följande utsagor logiskt ekvivalenta: $(p \rightarrow q) \leftrightarrow (\neg p \lor q)$ ?
+\end{enumerate}
+
+Predikatlogik är ytterligare en del av den matematiska logiken. Exempelvis kan {\bf P} representera "är udda", så att $P(x)$ betyder "x är udda". Man kan också bilda flerställiga relationer $P(x,y)$, exempelvis för att representera relationen "större än".\\
+Dessutom uppkommer begreppet {\it kvantorer}: $\forall x$ och $\exists x$. 
+\begin{itemize}
+\item $\forall x P(x)$ innebär att alla $x$ har egenskapen $P$
+\item $\exists x P(x)$ innebär att något $x$ har egenskapen $P$.
+\end{itemize}
+Tänk emellertid på att kvantorer {\it alltid} hänvisar till ett universum. Det krävs allså någon form av grundantagande.
+
+\pagebreak
+
+\begin{enumerate}
+\item[7.] Låt "universum" vara mängden av alla Göteborgare och låt $P(x) : x$ {\it heter Glen}.
+Skriv följande utsagor på symbolisk logisk form:
+\begin{itemize}
+\item[a)] Alla heter Glen i Göteborg.
+\item[b)] Det finns de som inte heter Glen i Göteborg.
+\item[c)] Ingen heter Glen i Göteborg.
+\end{itemize}
+
+\item[8.] Avgör om följande logiska argument är giltiga:
+\begin{itemize}
+\item[a)] Alla Nollan har nollbricka\\
+\underline {Alla med nollbricka går på Chalmers}\\
+Alla Nollan går på Chalmers
+\\
+\item[b)] Somliga Nollan använder Linux\\
+\underline{Somliga Nollan använder skohorn}\\
+Somliga skohornsanvändare använder Linux
+\\
+\item[c)] Alla Chalmersiter gillar ledighet\\
+\underline{Somliga lärare gillar ledighet}\\
+Somliga lärare är Chalmerister
+\\
+\end{itemize}
+
+\end{enumerate}
+\end{document}

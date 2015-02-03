@@ -1,0 +1,251 @@
+%SI 2014-09-05
+
+\documentclass{article}
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[swedish]{babel}
+\usepackage{fullpage}
+\usepackage{amssymb}
+\usepackage{bussproofs}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage{verbatim}
+\usepackage{tikz}
+\let\emptyset\varnothing
+
+
+\title{Supplemental Instructions}
+\author{Benjamin Eriksson \& Erik Thorsell \\ 
+		\small{beneri@student.chalmers.se} \&
+		\small{erithor@student.chalmers.se}
+}
+\date{
+      %Place date here!
+     }
+
+\begin{document}
+\maketitle
+
+
+\section*{Repetition}
+\begin{itemize}
+	\item[a) ]	Hitta en vektor $u$ som är ortogonal mot vektorn 
+				$v = 
+				\begin{pmatrix}
+					1 \\
+					2
+				\end{pmatrix}
+				$
+	\item[b) ]	Finns det några fler vektorer som är ortogonala mot $v$?
+\end{itemize}
+
+\subsection*{Projektion och Spegling}
+\subsubsection*{1.}
+Låt $\vec{u} = (3,1)$ vara riktningsvektorn för linjen L och $\vec{v} = (3,2)$. 
+
+\begin{itemize}
+\item[a) ] Hitta den ortogonala projektionen, $\vec{v_L}$ av $\vec{v}$ på L.
+\item[b) ] Hitta speglingen, $\vec{v_S}$ av $\vec{v}$ på L.
+\end{itemize}
+
+\noindent
+\setlength{\unitlength}{0.75mm}
+\begin{picture}(80,50)
+
+\multiput(0,0)(5,0){17}%
+{\line(0,1){45}}
+\multiput(0,0)(0,5){10}%
+{\line(1,0){80}}
+
+\put(22,20){$\vec{v}$}
+\put(27,11){$\vec{v_{L}}$}
+\put(15,8){$\vec{u}$}
+\put(60,30){$L$}
+\thicklines
+\put(10,10){\vector(3,2){30}}
+\put(10,10){\vector(3,1){35}}
+\put(10,10){\vector(3,1){10}}
+\put(0,7){\line(3,1){70}}
+\end{picture}
+\noindent
+\newline
+\newline
+
+
+\subsection*{Linjer och Plan}
+\subsubsection*{2.}
+Skriv ekvationen för linjen vilken passerar genom punkterna $A=(1,2)$ och 
+$B=(2,5)$ på normal form, parameterform och {\it `` y=kx+m-form ''}.
+
+\subsubsection*{3.}
+Skriv ekvationen för linjen $r$ vilken passerar genom punkten $A=(1,5)$ och 
+är parallell med den räta linjen $s$ mellan punkterna $(4,1)$ och $(-2,2)$.
+
+\subsubsection*{4.}
+Ett plan går genom punkterna $A=(1,1,-2)$, $B=(-1,5,2)$ och $C=(3,0,2)$.
+Bestäm planets ekvation.\\
+
+\section*{Avstånd}
+\subsection*{5.}
+\begin{itemize}
+    \item[a) ] Beräkna avståndet mellan punkterna $A=(9,2,7)$ \& $B=(4,8,10)$.
+    \item[b) ] Beräkna avståndet mellan linjen $-2x+3y+4=0$ och punkten 
+               $P=(5,6)$.
+    \item[c) ] Beräkna avståndet mellan planet $2x+y-z=-1$ och punkten 
+               $P=(3,1,-2)$.
+\end{itemize}
+
+\section*{Matriser}
+\subsection*{6.}
+\begin{itemize}
+    \item[a) ]	
+    			$ 
+    			\begin{bmatrix}
+    			1 & 2 \\
+    			5 & 9
+    			\end{bmatrix}
+    			+
+    			\begin{bmatrix}
+    			-2 & 4 \\
+    			6  & 1
+    			\end{bmatrix}
+    			$
+    \item[b) ]	
+    			$ 
+    			\begin{bmatrix}
+    			5 & -7 \\
+    			4 & -1
+    			\end{bmatrix}
+    			-
+    			\begin{bmatrix}
+    			5   & 5 \\
+    			-2  & 8
+    			\end{bmatrix}
+    			$
+    			
+    \item[c) ]	
+    			$ 
+    			\begin{bmatrix}
+    			5  & 5 \\
+    			2  & 3
+    			\end{bmatrix}
+    			\cdot
+    			\begin{bmatrix}
+    			2   \\
+    			7  
+    			\end{bmatrix}
+    			$
+    			
+    \item[d) ]	
+    			$ 
+    			\begin{bmatrix}
+    			5  & 5 \\
+    			2  & 3
+    			\end{bmatrix}
+    			\cdot
+    			\begin{bmatrix}
+    			2 & 8  \\
+    			7 & 1
+    			\end{bmatrix}
+    			$
+    \item[e) ]	
+    			$ 
+    			\begin{bmatrix}
+    			5 & 7  & 3 \\
+    			4 & -6 & 9
+    			\end{bmatrix}
+    			^{T}
+    			$
+    		
+\end{itemize}
+
+\subsection*{7.}
+\begin{itemize}
+    \item[a) ]	Beräkna determinanten.
+				\newline
+				\\
+				$ 
+    			\begin{vmatrix}
+   		 		7  & 4 \\
+  		  		1  & 2
+		    	\end{vmatrix}
+  			  	$
+    \item[b) ]	Vad kan sägas om vinkeln mellan vektorerna 
+    			$
+    			u =   			  
+				\begin{pmatrix}
+   		 		7  \\
+  		  		1  
+		    	\end{pmatrix}  		
+		    	,
+		    	v =   			  
+				\begin{pmatrix}
+   		 		4  \\
+  		  		2  
+		    	\end{pmatrix}  			
+		    	$ 
+		    	utifrån determinanten?
+\end{itemize}
+
+\subsection*{8.}
+\begin{itemize}
+    \item[a) ]	
+				$ 
+    			\begin{bmatrix}
+    			7  & 2 \\
+    			3  & 5
+    			\end{bmatrix}
+    			\cdot
+    			\begin{bmatrix}
+    			1 & 0  \\
+    			0 & 1
+    			\end{bmatrix}
+    			$
+    			
+    \item[b) ]	Beräkna inversen 
+    			\newline
+    			\\
+    			$ 
+    			\begin{bmatrix}
+    			7  & 2 \\
+    			3  & 5
+    			\end{bmatrix}
+				^{-1}
+    			$
+    			
+    \item[c) ]	
+    			$ 
+    			\begin{bmatrix}
+    			7  & 2 \\
+    			3  & 5
+    			\end{bmatrix}
+    			\cdot
+    			\begin{bmatrix}
+    			7  & 2 \\
+    			3  & 5
+    			\end{bmatrix}
+				^{-1}
+    			$
+    			
+    \item[d) ]	Bevisa att
+    			$ 
+    			A = 
+    			\begin{bmatrix}
+    			a  & b \\
+    			c  & d
+    			\end{bmatrix}  
+    			\implies
+    			A^{-1} = 
+    			\frac{1}{det(A)}
+    			\begin{bmatrix}
+    			d  & -b \\
+    			-c & a
+    			\end{bmatrix}		
+    			$
+    			\\
+    			\\
+    			\it{Hint: $A A^{-1} = ... $}
+\end{itemize}
+
+\end{document}

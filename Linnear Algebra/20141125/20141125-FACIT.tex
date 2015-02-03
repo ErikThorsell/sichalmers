@@ -1,0 +1,298 @@
+%SI 2014-09-05
+
+\documentclass{article}
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[swedish]{babel}
+\usepackage{fullpage}
+\usepackage{amssymb}
+\usepackage{bussproofs}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage{verbatim}
+\usepackage{tikz}
+\let\emptyset\varnothing
+
+
+\title{Supplemental Instructions}
+\date{
+      %Place date here!
+     }
+
+\begin{document}
+\maketitle
+
+\section*{Repetition}
+Dela upp i enhetsvektorer.
+\\
+$
+	(1) \qquad
+	f \bigg (  
+    \begin{pmatrix}
+    2		\\
+    1		\\
+    \end{pmatrix}  
+	\bigg )   
+	=
+	2 f \bigg (  
+    \begin{pmatrix}
+    1		\\
+    0		\\
+    \end{pmatrix}  
+	\bigg )  
+	+
+	f \bigg (  
+    \begin{pmatrix}
+    0		\\
+    1		\\
+    \end{pmatrix}  
+	\bigg ) 
+	=
+	2 f_x + f_y	
+	=
+	\begin{pmatrix}
+    8		\\
+    10		\\
+    \end{pmatrix}        
+$
+\\
+$   (2) \qquad
+	f \bigg (  
+    \begin{pmatrix}
+    4		\\
+    -3		\\
+    \end{pmatrix}  
+	\bigg )   
+	=
+	4 f \bigg (  
+    \begin{pmatrix}
+    1		\\
+    0		\\
+    \end{pmatrix}  
+	\bigg )  
+	+
+	-3 f \bigg (  
+    \begin{pmatrix}
+    0		\\
+    1		\\
+    \end{pmatrix}  
+	\bigg ) 
+	=
+	4 f_x - 3 f_y	
+	= 
+	\begin{pmatrix}
+    -4		\\
+    2		\\
+    \end{pmatrix}   	
+$
+Lösning av (1) och (2) ger: \\
+$
+	f_x	
+	= 
+	\begin{pmatrix}
+    2		\\
+    \frac{16}{5}		\\
+    \end{pmatrix} 
+    ,
+    \qquad
+    f_y	
+	= 
+	\begin{pmatrix}
+    4		\\
+    \frac{18}{5}		\\
+    \end{pmatrix}    
+    $
+\\
+\\
+Vilket betyder att 
+\\
+\\
+	$
+	A = 
+	\begin{pmatrix}
+    f_x 				&	f_y	
+    \end{pmatrix}
+    =
+	\begin{pmatrix}
+    2 				&	4		\\
+    \frac{16}{5}	& \frac{18}{5}		\\
+    \end{pmatrix} 
+    $
+
+\subsection*{1}
+\begin{itemize}
+    \item[a) ] 
+    Arean av parallellogrammet som spänns upp av $\vec{PQ}$ och $\vec{PR}$ ges 
+    av: \\
+        $\vec{PQ} = \vec{u} = 
+        \begin{bmatrix}
+            3 & -1 \\
+            4 & -2
+        \end{bmatrix}$
+        $= \begin{bmatrix}
+            2 \\
+            2
+           \end{bmatrix}$
+               
+        and \\
+
+        $\vec{PR} = \vec{v}= 
+        \begin{bmatrix}
+         -1  - 1 \\
+          6  - 2
+        \end{bmatrix}$
+        $= \begin{bmatrix}
+           -2 \\
+            4
+           \end{bmatrix}$
+
+        $A = det \begin{bmatrix}
+                   \vec{u} & \vec{v}
+                 \end{bmatrix}
+           = det \begin{bmatrix}
+                   2 & -2 \\
+                   2 &  4
+                 \end{bmatrix}
+           = 12$ 
+
+ Aren för vår triangel är $\frac{A}{2} = 6$
+    \item[b)] 120 \\
+        {\it Hint: $\frac{area(D')}{area(D)} = |det(A)|$}
+                        
+\end{itemize}
+
+\subsection*{2}
+$A = 
+\begin{bmatrix}
+1  &  0 & 0 \\
+0  & -1 & 0 \\
+0  &  0 & 1
+\end{bmatrix}$, 
+$ b = 
+\begin{bmatrix}
+0 \\
+2 \\
+0
+\end{bmatrix}$
+
+\subsection*{3}
+\subsubsection*{a)}
+Spegla $e_x$ och $e_y$ i $y = kx$: \\
+Riktningsvektorn kan skrivas som $u = (1,k)$. \\
+$f(e_x) = 
+2 \frac{e_x \cdot u}{u \dot u} u - e_x = 
+\frac{1}{1+k^2}
+\begin{pmatrix}
+ 1 - k^2   \\
+ 2k       \\
+\end{pmatrix}$ \\
+$f(e_y) = 
+2 \frac{e_y \cdot u}{u \dot u} u - e_y = 
+\frac{1}{1+k^2}
+\begin{pmatrix}
+ 2k   \\
+ k^2 - 1      \\
+\end{pmatrix}$ \\
+$A = 
+\begin{pmatrix}
+ f(e_x) & f(e_y) \\
+\end{pmatrix}
+=
+\frac{1}{1+k^2}
+\begin{pmatrix}
+ 1 - k^2 & 2k   \\
+ 2k & k^2 - 1      \\
+\end{pmatrix}
+$
+\subsubsection*{b)}
+$
+\frac{1}{5}
+\begin{pmatrix}
+ 19   \\
+ 33     \\
+\end{pmatrix}
+$
+
+
+\subsection*{4}
+\subsubsection*{a)}
+$
+A = 
+\begin{pmatrix}
+ cos \beta & -sin \beta   \\
+ sin \beta & cos \beta    \\
+\end{pmatrix}
+=
+\begin{pmatrix}
+ cos (pi/6) & -sin (pi/6)   \\
+ sin (pi/6) & cos (pi/6)    \\
+\end{pmatrix}
+=
+\frac{1}{2}
+\begin{pmatrix}
+ \sqrt{3} & -1   \\
+ 1 & \sqrt{3}    \\
+\end{pmatrix}
+$
+
+\subsubsection*{b)}
+$
+B =
+\begin{pmatrix}
+ 0 & 1  \\
+ 1 & 0    \\
+\end{pmatrix}
+$
+\subsubsection*{c)}
+Eftersom rotationen görs först så måste A vara 'längst in' så att $f(v) = B(A(v))$, därav kan ordningen se omvänd ut. \\
+$B \circ A = BA = 
+\frac{1}{2}
+\begin{pmatrix}
+ 1 & \sqrt{3}  \\
+ \sqrt{3} & -1    \\
+\end{pmatrix}$
+
+
+\subsection*{5}
+Se boken.
+
+\subsection*{6}
+\subsubsection*{a)}
+$A =
+    \begin{bmatrix}
+        1   &   2   &   -1 \\
+        2   &   2   &   -1 \\
+        2   &   5   &   2   
+    \end{bmatrix}$, 
+$\mathbf{x} = 
+    \begin{bmatrix}
+        x \\
+        y \\
+        z
+     \end{bmatrix}$ och
+$\mathbf{b} = 342 $
+
+\subsubsection*{b)}
+
+$\begin{bmatrix}
+    1 & 2 & -1 & 3 \\
+    2 & 2 & -1 & 4 \\
+    2 & 5 & 2  & 2  
+\end{bmatrix} \rightarrow $  
+$\begin{bmatrix}
+    1 & 2 &-1 & 3 \\
+    0 &-2 & 1 &-2 \\
+    0 & 1 & 4 &-4  
+\end{bmatrix} \rightarrow $
+$\begin{bmatrix}
+    1 & 2 &-1 & 3 \\
+    0 & 1 & 4 &-4 \\
+    0 & 0 & 9 &-10  
+\end{bmatrix}$
+\\
+\\
+\noindent
+Detta ger $z=\frac{-10}{9}, y=\frac{4}{9}, x=1$
+
+\end{document}

@@ -1,0 +1,312 @@
+%SI 2014-09-05
+
+\documentclass{article}
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[swedish]{babel}
+\usepackage{fullpage}
+\usepackage{amssymb}
+\usepackage{bussproofs}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage{verbatim}
+\usepackage{tikz}
+\let\emptyset\varnothing
+
+
+\title{Supplemental Instructions}
+\date{
+      %Place date here!
+     }
+
+\begin{document}
+\maketitle
+
+
+\subsection*{1}
+Beräkna 
+
+$$
+det
+\begin{bmatrix}
+ 1 & 2 & -1 \\
+ 2 & 5 & 3 \\
+ 3 & 7 & 1
+\end{bmatrix}
+$$
+\\
+
+$
+\begin{bmatrix}
+ 1 & 2 & -1 \\
+ 0 & 1 & 5 \\
+ 3 & 7 & 1
+\end{bmatrix}
+=
+\begin{bmatrix}
+ 1 & 2 & -1 \\
+ 0 & 1 & 5 \\
+ 0 & 1 & 4
+\end{bmatrix}
+= 
+1 * det
+\begin{bmatrix}
+ 1 & 5 \\
+ 1 & 4
+\end{bmatrix}
+= 1 * (4-5) = -1
+$
+\subsection*{2}
+$
+\begin{bmatrix}
+1 & 3 & -1 \\
+0 & 1 & 2 \\
+1 & 0 & -1
+\end{bmatrix}
+\begin{bmatrix}
+1 & 0 & 0 \\
+0 & 1 & 0 \\
+0 & 0 & 1
+\end{bmatrix}
+\implies
+\begin{bmatrix}
+1 & 3 & -1 \\
+0 & 1 & 2 \\
+0 & -3 & 0
+\end{bmatrix}
+\begin{bmatrix}
+1 & 0 & 0 \\
+0 & 1 & 0 \\
+-1 & 0 & 1
+\end{bmatrix}
+\implies
+\begin{bmatrix}
+1 & 3 & -1 \\
+0 & 1 & 2 \\
+0 & 0 & 6
+\end{bmatrix}
+\begin{bmatrix}
+1 & 0 & 0 \\
+0 & 1 & 0 \\
+-1 & 3 & 1
+\end{bmatrix}
+\\
+\begin{bmatrix}
+1 & 3 & -1 \\
+0 & 1 & 2 \\
+-1 & 0 & 1
+\end{bmatrix}
+\begin{bmatrix}
+1 & 0 & 0 \\
+0 & 1 & 0 \\
+-1/6 & 1/2 & 1/6
+\end{bmatrix}
+\implies
+\begin{bmatrix}
+1 & 3 & -1 \\
+0 & 1 & 0 \\
+0 & 0 & 1
+\end{bmatrix}
+\begin{bmatrix}
+1 & 0 & 0 \\
+1/3 & 0 & -1/3 \\
+-1/6 & 1/2 & 1/6
+\end{bmatrix}
+\implies
+\begin{bmatrix}
+1 & 3 & 0 \\
+0 & 1 & 0 \\
+0 & 0 & 1
+\end{bmatrix}
+\begin{bmatrix}
+5/6 & 1/2 & 1/6 \\
+1/3 & 0 & -1/3 \\
+-1/6 & 1/2 & 1/6
+\end{bmatrix}
+\\
+\begin{bmatrix}
+1 & 0 & 0 \\
+0 & 1 & 0 \\
+0 & 0 & 1
+\end{bmatrix}
+\begin{bmatrix}
+-1/6 & 1/2 & 7/6 \\
+1/3 & 0 & -1/3 \\
+-1/6 & 1/2 & -1/6
+\end{bmatrix}
+$
+
+\subsection*{3}
+$
+A = 
+\begin{bmatrix}
+ 2 & 3 \\
+ 0 & 5 
+\end{bmatrix}
+\implies
+det 
+\begin{bmatrix}
+ 2-\lambda & 3 \\
+ 0 & 5-\lambda 
+\end{bmatrix}
+= 0
+$
+\\\\
+$\lambda_{1} = 2$ och $\lambda_{2} = 5$.
+\\\\ 
+$\lambda_{1} \implies
+\begin{bmatrix}
+ 2-2 & 3 \\
+ 0 & 5-2 
+\end{bmatrix}
+= 
+\begin{bmatrix}
+ 0 & 3 \\
+ 0 & 3 
+\end{bmatrix}
+\implies
+v_1 = 
+\begin{bmatrix}
+ 1  \\
+ 0
+\end{bmatrix}
+$
+\\\\
+$\lambda_{2} \implies
+\begin{bmatrix}
+ 2-5 & 3 \\
+ 0 & 5-5 
+\end{bmatrix}
+= 
+\begin{bmatrix}
+ -3 & 3 \\
+ 0 & 0 
+\end{bmatrix}
+\implies
+v_2 = 
+\begin{bmatrix}
+ 1  \\
+ 1
+\end{bmatrix}
+$
+Nu har vi alltså 
+\\
+$P = 
+\begin{bmatrix}
+ 1 & 1 \\
+ 0 & 1 
+\end{bmatrix}
+\quad
+D = 
+\begin{bmatrix}
+ 2 & 0 \\
+ 0 & 5 
+\end{bmatrix}
+\quad
+P^-1 = 
+\begin{bmatrix}
+ 1 & -1 \\
+ 0 & 1 
+\end{bmatrix}
+$
+\\
+Till sist: $A^n = P D^n P^-1$
+$$
+\begin{bmatrix}
+ 2^n & 5^n-2^n \\
+ 0 & 5^n 
+\end{bmatrix}
+$$
+
+\subsection*{4}
+Låt A vara matrisen för rotationen. Då får vi
+$$
+A = 
+\begin{bmatrix}
+    1   &   0   &   0   \\
+    0 & 1/\sqrt{2} & -1/\sqrt{2} \\
+    0 & 1/\sqrt{2} & 1/\sqrt{2} \\
+\end{bmatrix}
+$$
+Låt sedan B vara matrisen för projektionen. Då får vi
+$$
+B = 
+\begin{bmatrix}
+    1   &   0   &   0   \\
+    0   &   0   &   0   \\
+    0   &   0   &   1   \\
+\end{bmatrix}
+$$
+Den sammansatta, sökta, avbildningen har då matrisen
+$$
+BA = 
+\begin{bmatrix}
+    1   &   0   &   0   \\
+    0   &   0   &   0   \\
+    0   &   1/\sqrt{2}   &   1/\sqrt{2}   \\
+\end{bmatrix}
+$$
+
+\subsection*{5}
+a) Matrisen för g m.a.p basen F är
+$$
+A_F = ({g({\bf f}_1})_F \ {g({\bf f}_2})_F \ {g({\bf f}_3})_F) = 
+(({\bf f}_1)_F \ {({\bf f}_2})_F \ {(-{\bf f}_3})_F ) = 
+\begin{bmatrix}
+    1   &   0   &   0   \\
+    0   &   1   &   0   \\
+    0   &   0   &  -1   \\
+\end{bmatrix}
+$$
+b) Matrisen för g m.a.p standardbasen är
+$$
+A = F A_F F^{-1} = F A_F F^t = 
+\begin{bmatrix}
+    1/\sqrt{3} & 1/\sqrt{2}  & 1/\sqrt{3} \\
+    1/\sqrt{3} &      0      & 2/\sqrt{6} \\
+    1/\sqrt{3} & -1/\sqrt{2} & 1/\sqrt{6} \\
+\end{bmatrix}
+\begin{bmatrix}
+    1 & 0 & 0 \\
+    0 & 1 & 0 \\
+    0 & 0 & -1 \\ 
+\end{bmatrix}
+\begin{bmatrix}
+    1/\sqrt{3} & -1/\sqrt{3} & 1/\sqrt{3} \\
+    1/\sqrt{2} &     0       & -1/\sqrt{2} \\
+    1/\sqrt{6} & 2/\sqrt{6} & 1/\sqrt{6} \\
+\end{bmatrix}
+=
+$$
+$$
+\begin{bmatrix}
+    2/3 & -2/3 & -1/3 \\   
+    -2/3 & -1/3 & -2/3 \\   
+    -1/3 & -2/3 & 2/3 \\
+\end{bmatrix}
+$$
+
+\subsection*{6}
+Planets normal är 
+$
+n = \begin{pmatrix}
+        1 \\
+        -2 \\
+        3 \\
+    \end{pmatrix}
+$
+Välj en godtycklig punkt i planet $P_o = (7,0,0)$. 
+$$
+\vec{(P_oP)} = \begin{pmatrix} 2 \\ 3 \\ -1 \end{pmatrix} - \begin{pmatrix} 7 \\ 0 \\ 0 \end{pmatrix} = \begin{pmatrix} -5 \\ 3 \\ -1 \end{pmatrix}
+$$
+Det sökta avståndet är
+$$d = \left | \left | \vec{(P_oP)}_L \right | \right | = 
+\left | \left | \frac{\vec{(P_oP)} \cdot n}{{\left | \left | n \right | \right |}^2} n \right | \right | = 
+\frac{\left | \vec{(P_oP)} \cdot n \right |}{\left| \left | n \right | \right |} = 
+\frac{\left | \begin{pmatrix} -5 \\ 3 \\ -1 \end{pmatrix} \cdot \begin{pmatrix} 1 \\ -2 \\ 3 \end{pmatrix} \right |}{\left | \left | \begin{pmatrix} 1 \\ -2 \\ 3 \end{pmatrix} \right | \right |} = 
+\frac{\left | -5 -6 -3 \right |}{\sqrt{1+4+9}} = 
+\frac{14}{\sqrt{14}} = 
+\sqrt{14}
+$$
+\end{document}

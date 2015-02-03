@@ -1,0 +1,108 @@
+%SI 2014-09-05
+
+\documentclass{article}
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[swedish]{babel}
+\usepackage{amssymb}
+\usepackage{fullpage}
+\usepackage{bussproofs}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage{verbatim}
+\usepackage{tikz}
+
+\usepackage{tkz-berge}
+\let\emptyset\varnothing
+
+
+
+\title{Supplemental Instructions}
+\author{Benjamin Eriksson \& Erik Thorsell \\ 
+		\small{beneri@student.chalmers.se} \&
+		\small{erithor@student.chalmers.se}
+}
+
+\date{
+     2014-12-16 
+ }
+
+\begin{document}
+\maketitle
+
+\subsection*{1}
+Beräkna 
+
+$$
+det
+\begin{bmatrix}
+ 1 & 2 & -1 \\
+ 2 & 5 & 3 \\
+ 3 & 7 & 1
+\end{bmatrix}
+$$
+
+\subsection*{2}
+Beräkna $A^{-1}$, där 
+$
+A = 
+\begin{bmatrix}
+1 & 3 & -1 \\
+0 & 1 & 2 \\
+1 & 0 & -1
+\end{bmatrix}
+$
+
+\subsection*{3}
+Beräkna $A^n$ för matrisen
+$$
+A = 
+\begin{bmatrix}
+ 2 & 3 \\
+ 0 & 5 
+\end{bmatrix}
+$$
+
+\subsection*{4}
+Beräkna matrisen för den linjära avbildning i rummet som består av rotation 
+$\frac{\pi}{4}$ radianer runt $x$-axeln, i den riktning som bestäms av att 
+positiva delen av $y$-axeln vrids mot den positiva delen av $z$-axeln, följt 
+av projektion på $xz$-planet.
+
+\subsection*{5}
+Betrakta ON-basen $F = ({\bf f}_1 {\bf f}_2 {\bf f}_3)$, där
+$$
+    {\bf f}_1 = \frac{1}{\sqrt{3}} 
+        \begin{pmatrix}
+            1 \\
+           -1 \\
+            1 \\
+        \end{pmatrix}
+        ,
+    {\bf f}_2 = \frac{1}{\sqrt{2}} 
+        \begin{pmatrix}
+            1 \\
+            0 \\
+           -1 \\
+        \end{pmatrix}
+        ,
+    {\bf f}_3 = \frac{1}{\sqrt{6}} 
+        \begin{pmatrix}
+            1 \\
+            2 \\
+            1 \\
+        \end{pmatrix}
+$$
+\noindent
+Låt $g$  vara den linjära avbildning som består av spegling i planet genom 
+origo som spänns upp av ${\bf f}_1$ och ${\bf f}_2$.
+\begin{itemize}
+    \item[a) ] Bestäm matrisen för $g$ med avseende på basen $F$.
+    \item[b) ] Bestäm matrisen för $g$ med avseende på standardbasen.
+\end{itemize}
+
+\subsection*{6}
+Bestäm (minsta) avståndet från punkten $P=(2,3,-1)$ till planet $x - 2y + 3z = 7$.
+
+\end{document}

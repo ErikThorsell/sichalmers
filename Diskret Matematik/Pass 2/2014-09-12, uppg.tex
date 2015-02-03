@@ -1,0 +1,102 @@
+	%SI 2014-09-05
+
+\documentclass{article}
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[swedish]{babel}
+\usepackage{fullpage}
+\usepackage{amssymb}
+\usepackage{bussproofs}
+
+\let\emptyset\varnothing
+
+\title{Supplemental Instructions}
+\author{Erik Thorsell \\ 
+		\small{erithor@student.chalmers.se}
+}
+\date{2014-09-12}
+
+\begin{document}
+\maketitle
+
+\subsection*{Repetition}
+Repetition är moder till all inlärning.
+\begin{enumerate}
+\item[1.] Avgör om följande logiska argument är en tautologi: 
+\begin{prooftree}
+\Axiom$\neg x \rightarrow \neg w \fCenter\ $
+\UnaryInf$(x \lor \neg w) \rightarrow z \fCenter\ $
+\UnaryInf$\neg p \rightarrow \neg z \fCenter\ $
+\UnaryInf$p \rightarrow (\neg r \lor \neg a) \fCenter\ $
+\UnaryInf$\neg r \lor \neg a \fCenter\ $
+\end{prooftree}
+{\it Uppg 1.7 (h)}
+
+\item[2.] Låt "universum" vara mängden av alla barn på tåget {\it(undertecknad sitter på ett tåg för tillfället)} och låt $P(x) : x$ {\it är irriterande}.\\
+Skriv följande utsagor på symbolisk logisk form:
+\begin{itemize}
+\item[a)] Alla barn på tåget är irriterande.
+\item[b)] Några barn på tåget är inte irriterande.
+\item[c)] Det finns inte en enda unge på tåget som inte är irriterande.\\
+\end{itemize}
+
+\item[3.] Avgör om följande logiska argument är giltigt:\\
+Somliga gitarrister gillar blues\\
+\underline{Alla groupies gillar blues}\\
+Somliga groupies gillar gitarrister
+\end{enumerate}
+
+\subsection*{Mängder}
+\begin{enumerate}
+\item[4.] Skriv elementen i följande mängder:
+\begin{itemize}
+\item[a)] $\{ x \in \mathbb{Z+} : -3 < x < 3 \}$
+\item[b)] $\{ x \in \mathbb{Z} : 3 > x \land x > -1 \} $
+\end{itemize}
+
+\item[5.] Låt $A$, $B$ och $C$ vara tre mängder. Givet att $A$ och $B$ är disjunkta,
+$|A \cup B \cup C| = 30$, $|A \backslash C|=10$ och $|B \backslash C|=5$. Vad är det högsta, respektive minsta, antal element $C$ kan innehålla?
+
+\item[6.] Låt $A = \{ x \in \mathbb{N} : x < 4\}$
+\begin{itemize}
+\item[a)] Bestäm potensmängden $\mathcal P \left({A}\right)$
+\item[b)] Bestäm den Kartesiska produkten $A \times \mathcal P \left({A}\right)$
+\end{itemize}
+\end{enumerate}
+
+\subsection*{Funktioner}
+\begin{enumerate}
+\item[7.] Låt $A$ vara mängden av alla andragradspolynom med reella koefficienter och $B$ mängden av alla förstagradspolynom med reella koefficienter.\\
+Derivering är en funktion $D: A \longrightarrow B$ definierad av:
+\[D(a+bx+cx^2)=b+2cx\]
+\begin{itemize}
+\item[a)] Teckna ett uttryck för $A$, resp. $B$.
+\item[b)] Är $D: A \longrightarrow B$ injektiv?
+\item[c)] Är $D: A \longrightarrow B$ surjektiv?
+\item[d)] Har $D: A \longrightarrow B$ invers? {\it Om så är fallet, bestäm inversen.}
+\end{itemize}
+\end{enumerate}
+
+\subsection*{Relationer}
+\begin{enumerate}
+\item[8.] Låt $R$ vara relation på $\mathbb{R}^2$ definierad av att $(a,b)R(c,d)$ om $a^2+b^2=c^2+d^2$.
+\begin{itemize}
+\item[a)] Visa att $R$ är en ekvivalensrelation.
+\item[b)] Rita ekvivalensklassen som innehåller (1,1) i ett koordinatsystem.
+\item[c)] Beskriv ekvivalensklassen geometriskt.
+\item[d)] Ge en mängd med exakt ett element ur varje ekvivalensklass.
+\end{itemize}
+\end{enumerate}
+
+\subsection*{Operatorer}
+\begin{enumerate}
+\item[9.] Vi definierar en binär operator $\star$ på $\mathbb{R}$ genom
+\[x \star y = x-2y+3xy\]
+\begin{itemize}
+\item[a)] Visa att $\star$ inte är associativ.
+\item[b)] Visa att $\star$ inte är kommutativ.
+\item[c)] Vilka par $x,y \in \mathbb{R}$ kommuterar med avseende på $\star$?
+\end{itemize}
+\end{enumerate}
+\end{document}

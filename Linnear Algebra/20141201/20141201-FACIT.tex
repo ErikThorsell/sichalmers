@@ -1,0 +1,245 @@
+%SI 2014-09-05
+
+\documentclass{article}
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[swedish]{babel}
+\usepackage{fullpage}
+\usepackage{amssymb}
+\usepackage{bussproofs}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage{verbatim}
+\usepackage{tikz}
+\let\emptyset\varnothing
+
+
+\title{Supplemental Instructions}
+\date{
+      %Place date here!
+     }
+
+\begin{document}
+\maketitle
+
+\section*{Repetition}
+Dra streck mellan koncept som hänger ihop. \\
+\setlength{\tabcolsep}{50pt}
+\renewcommand{\arraystretch}{2.0}
+\begin{tabular}{ r l }
+  $ad-bc$  			 & Determinant av 2x2 matris\\
+  $\sqrt{v_{1}^2 + v_{2}^2 + ...}$ & Längd av vektor  \\
+  $f_{A}(c\vec{u} + d\vec{v}) = c f_{A}(\vec{u}) + d f_{A}(\vec{v})$ & Linjär avbildning \\
+  $B = \big( f(e_x) \quad f(e_y) \quad f(e_z) \big)$   & Basbyte \\
+  $||u \times v||$ & Area av parallellogram \\
+  $\frac{u \cdot v}{u \cdot u} u$	& Projektion \\
+  $\big( e_x \quad e_y \big)$ & Identitetsmatris \\
+  $\big( e_y \quad e_x \big)$ & Spegling i y=x \\
+  $A^t A x = A^t b$ & Minsta kvadratlösning \\
+  \renewcommand{\arraystretch}{1.0}  
+  $
+  \begin{bmatrix}
+    1  &  0  \\
+    0  &  -1  
+  \end{bmatrix}
+  $ & Spegling i y-axeln \\
+  
+\end{tabular}
+\renewcommand{\arraystretch}{1.0}  
+
+
+\section*{1}
+Börja med att skriva om på matrisform.
+\\
+$R_i$ beteckna rad i.\\
+$$
+\begin{bmatrix}
+    1  & -2   &  a   &  1 \\
+    1  & -a   &  2   &  1  \\
+    a  & -4   &  4   &  2   \\
+\end{bmatrix}
+$$
+
+$R_1 * (-1) + R_2 \rightarrow R_2$, \quad
+$R_1 * (-a) + R_3 \rightarrow R_3$, \quad
+
+$$
+\begin{bmatrix}
+    1  & -2     &  a       &  1 \\
+    0  & 2-a    &  2-a     &  0  \\
+    0  & 2a-4   &  4-a^2   &  2-a   \\
+\end{bmatrix}
+$$
+$a = 2 \implies \infty$ antal lösningar, ty överbestämt matris. \\
+$a = -4 \implies $ ingen lösningen. \\
+$a \neq 2 $ och $a \neq -4 \implies $ entydlig lösning.
+
+
+\section*{2}
+Skriv om på punkterna, (1, 3/2), (2,8) och (3, 11/2), på följande sätt: \\
+\begin{equation}
+    \begin{cases}
+                   y_1 = kx_1 + l\\
+                   y_2 = kx_2 + l \\
+                   y_3 = kx_3 + l
+    \end{cases}
+\end{equation} 
+=
+\begin{equation}
+    \begin{cases}
+                   3/2  = k*1 + l\\
+                   8    = k*2 + l \\
+                   11/2 = k*3 + l
+    \end{cases}
+\end{equation} 
+Gör sedan om till en matris ekvation $Ax = b$ \\
+$$
+\begin{bmatrix}
+    1  &  1 \\
+    2  &  1 \\
+    3  &  1 \\
+\end{bmatrix}
+\begin{bmatrix}
+    k \\
+    l \\
+\end{bmatrix}
+=
+\begin{bmatrix}
+    3/2 \\
+    8   \\
+    11/2  \\
+\end{bmatrix}
+$$
+Vi vill nu lösa $A^t A x = A^t b$. \\
+$$
+A^t A = 
+\begin{bmatrix}
+    14  &  6 \\
+    6  &  3 
+\end{bmatrix}
+,\qquad
+A^t b = 
+\begin{bmatrix}
+    34   \\
+    15
+\end{bmatrix}
+$$
+Använd gauss för att lösa ekvationen.
+$$
+\begin{bmatrix}
+    14  &  6  & 34 \\
+    6   &  3  & 15
+\end{bmatrix}
+$$
+Vilkter leder till att $x = (2,1) \implies k = 2, l = 1$
+\section*{3}
+$$
+\begin{bmatrix}
+    1  &  2  &  1  & -1  &  2 \\
+    3  &  4  &  5  &  2  &  0 \\
+    2  &  2  &  1  &  0  &  2 \\
+\end{bmatrix} \rightarrow 
+\begin{bmatrix}
+    1  &  2  &  1  & -1  &  2 \\
+    0  & -2  &  2  &  5  & -6 \\
+    0  & -2  & -1  &  2  & -2 \\
+\end{bmatrix} \rightarrow
+\begin{bmatrix}
+    1  &  2  &  1  & -1  &  2 \\
+    0  & -2  &  2  &  5  & -6 \\
+    0  &  0  & -3  & -3  &  4 \\
+\end{bmatrix} \rightarrow
+$$
+
+$$
+\begin{bmatrix}
+    1  &  2  &  1  & -1  &  2 \\
+    0  &  1  & -1  &  \frac{-5}{2}  & 3 \\
+    0  &  0  &  1  &  1  &  \frac{-4}{3} \\
+\end{bmatrix} \rightarrow
+\begin{bmatrix}
+    1  &  0  &  3  & 4  &  -4 \\
+    0  &  1  & -1  &  \frac{-5}{2}  & 3 \\
+    0  &  0  &  1  &  1  &  \frac{-4}{3} \\
+\end{bmatrix} \rightarrow
+\begin{bmatrix}
+    1  &  0  &  0  &  1  &  0 \\
+    0  &  1  &  0  &  \frac{-3}{2}  & \frac{5}{3} \\
+    0  &  0  &  1  &  1  &  \frac{-4}{3} \\
+\end{bmatrix}
+$$
+
+\noindent
+Från detta får vi en lösning med två fria parametrar och alltså geometrisk ett 
+plan i $\mathbb{R}^5$. En parametrisering av planet ges av:
+$$
+\mathbf{x} = s
+\begin{bmatrix}
+    -1 \\
+    3/2 \\
+    -1 \\
+    1 \\
+    0 \\
+\end{bmatrix}
++ t
+\begin{bmatrix}
+    0 \\
+    -5/3 \\ 
+    4/3 \\
+    0 \\
+    1 \\
+\end{bmatrix}
+$$
+
+\section*{4}
+Lösning saknas ty pivotelement!
+
+\section*{5}
+Tanken är att skriva matrisen på övertriangulär form för att sedan multiplicera diagonalen.
+\\
+$R_i$ beteckna rad i.\\
+
+$$
+\begin{bmatrix}
+    1  & 1   &  0   &  1 \\
+    2  & 8   &  -1  &  2  \\
+    4  & -4  &  0   &  3   \\
+    8  &  2  &  1   &  4   \\
+\end{bmatrix}
+$$
+
+$R_1 * (-2) + R_2 \rightarrow R_2$, \quad
+$R_1 * (-4) + R_3 \rightarrow R_3$, \quad
+$R_4 * (-8) + R_4 \rightarrow R_4$   
+
+
+$$
+\begin{bmatrix}
+    1  & 1   &  0   &  1 \\
+    0  & 6   &  -1  &  0  \\
+    0  & -8  &  0   &  -1   \\
+    0  &  -6  &  1   &  -4   \\
+\end{bmatrix}
+$$
+
+$R_2 * (8/6) + R_3 \rightarrow R_3$, \quad
+$R_2 * (1) + R_4 \rightarrow R_4$   
+
+$$
+\begin{bmatrix}
+    1  & 1   &  0   &  1 \\
+    0  & 6   &  -1  &  0  \\
+    0  & 0   &  -4/3   &  -1   \\
+    0  & 0   &  0   &  -4   \\
+\end{bmatrix}
+$$
+$1 \cdot 6 \cdot -4/3 \cdot -4 = 32$
+
+
+\section*{6}
+Genom att beräkna determinanten av matrisen med de tre vektorerna som rader 
+ser vi att denna är nollskiljd. Detta är fallet {\bf om och endast om} 
+vektorerna är linjärt oberoende.
+
+\end{document}

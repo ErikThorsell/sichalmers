@@ -1,0 +1,98 @@
+%SI 2014-09-05
+
+\documentclass{article}
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[swedish]{babel}
+\usepackage{fullpage}
+\usepackage{amssymb}
+\usepackage{bussproofs}
+
+\let\emptyset\varnothing
+
+\title{Supplemental Instructions}
+\author{Erik Thorsell \\ 
+		\small{erithor@student.chalmers.se}
+}
+\date{2014-09-26}
+
+\begin{document}
+\maketitle
+
+\subsection*{Repetition}
+Repetition är moder till all inlärning.
+\begin{enumerate}
+
+\item[1.]
+Visa att det för alla positiva heltal $n$ gäller att:
+$$n+3\sum\limits_{k=1}^{n} k(k-1) = n^3$$
+{\it Tentamen 2004-10-22}
+
+\item[2.]
+Låt $A=\{1,2,3\}$ och $B=\{1,2\}$
+\begin{itemize}
+\item[a)] Hur många funktioner finns med $A$ som definitionsmängd och $B$ som målmängd?
+\item[b)] Finns det någon injektiv funktion med $A$ som definitonsmängd och $B$ som målmängd?
+Om någon existerar, ange en.
+\item[c)] Finns det någon surjektiv funktion med $A$ som definitionsmängd och $B$ som målmängd?
+Ange i så fall en sådan.
+\end{itemize}
+{\it Tentamen 2005-12-16}
+\end{enumerate}
+
+\subsection*{Delbarhet och diofantiska ekvationer}
+\begin{enumerate}
+\item[3.] 
+Emil och Emilia hade varit på en lång resa. När de kom hem räknade de ut att under de dagar 
+de åkt båt hade de färdats i genomsnitt 720 km/dygn. Övriga dagar hade de färdats i snitt 
+400 km/dygn. Totalt hade de färdats 15 200 km. Hur många dagar hade Emil och Emilia varit på 
+resande fot och hur många av dessa hade de åkt båt?\\
+{\it Det var en diofantastisk resa!}\\
+
+{\it Tentamen 2005-03-30}
+
+\item[4.]
+Beräkna $sgd(a,b)$. Avgöra sedan om det existerar en invers till [a] i $\mathbb{Z}_b$ och beräkna 
+i så fall denna, då:
+\begin{itemize}
+\item[a)] $a = 1001$ och $b = 748$
+\item[b)] $a = 317$ och $b = 70$
+\item[c)] $a = 31$ och $b = 47$ 
+\end{itemize}
+
+{\it Tentamen 2005-10-21}
+
+\item[5.]
+Ge fullständig lösning till den diofantiska ekvationen $$28x+36y=100$$ och ange även inversen till $7$ i $\mathbb{Z}_9$.\\
+
+{\it Tentamen 2005-01-11}
+
+\item[6. ]
+Beskriv Euklides utökade algoritm för att det till två heltal $a$ och $b$ finns 
+$sgd(a,b)$ och två heltal $u$ och $v$ sådana att $au+bv=sgd(a,b)$.\\
+Förklara varför algoritmen fungerar!\\
+
+{\it Tentamen 2006-01-10}
+\end{enumerate}
+
+\subsection*{Primtal}
+\begin{enumerate}
+
+\item[7.]
+Primtalsfaktorisera följande tal:
+\begin{itemize}
+\item[a) ] 1 155
+\item[b) ] 340
+\item[c) ] 28 675
+\end{itemize}
+
+\item[8.]
+Skriv en funktion i Haskell som tar en integer $n$ som argument och returnerar en lista med intergers. 
+Listan ska innehålla de $n$ första primtalen.\\
+
+Ex:\\
+ghci>>primeFunc(6)\\
+$[2,3,5,7,11,13]$\\
+\end{enumerate}
+\end{document}

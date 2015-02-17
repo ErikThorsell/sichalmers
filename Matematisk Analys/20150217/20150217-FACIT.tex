@@ -1,0 +1,129 @@
+%SI 2014-09-05
+
+\documentclass{article}
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[swedish]{babel}
+\usepackage{fullpage}
+\usepackage{amssymb}
+\usepackage{bussproofs}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage{verbatim}
+\usepackage{tikz}
+\let\emptyset\varnothing
+
+
+\title{Supplemental Instructions}
+\date{
+      %Place date here!
+     }
+
+\begin{document}
+\maketitle
+
+\section*{1}
+\begin{itemize}
+    \item[a) ] 	$u  = x^2$ \\ 
+    			$\frac{du}{dx} = 2x$ \\
+    			$\frac{du}{2x} = dx$ \\
+    			$\int{ xe^{x^2} dx } = \int{\frac{ xe^{u} du}{2x} } = 
+    			\int{\frac{ e^{u} du}{2} } = 1/2 e^u = 1/2 e^{x^2}$ \\
+    			
+    \item[b) ]  Här gör vi en lite annorlunda substitution: \\
+    			$x = sin(u) \> \implies \> 
+    			\frac{dx}{du} = \frac{d}{du} sin(u) = cos(u)$ \\
+    			$dx = cos(u) du$ \\
+
+    		  	$\int \frac{1}{\sqrt{1-(sin u)^2}} cos(u) du$ \\ 
+    			$\int \frac{1}{cos(u)} cos(u) du$ \\ 
+    			$\int 1 du = u$ \\ 
+    			$x = sin(u) \implies u = sin^{-1}(x) $ \\ \\
+    			$\int \frac{1}{\sqrt{1-x^2}} dx = sin^{-1}(x)$ 
+    			
+\end{itemize}
+
+\section*{2}
+\begin{itemize}
+    \item[a) ]	Man bör alltid skriva om integralen men limits för att göra den 				giltlig: \\ 
+				$\lim_{b \rightarrow \inf} \> \int_{1}^{b} \frac{1}{x^2} dx$ \\
+    			$\int_{1}^{b} \frac{1}{x^2} dx = (- 1/b) - (- 1/1)
+    			= \{  \lim_{b \rightarrow \inf} \} = (- 0) - (-1) = 1$ \\
+    			
+    			
+    \item[b) ] 	Från formelsamlingen ser vi att: \\
+    			$\int \frac{1}{1+x^2} dx = tan^{-1}(x)$ \\
+    			Alltså får vi: \\
+    			$tan^{-1}(\infty) - tan^{-1}(0) = \frac{\pi}{2} - 0 = \frac{\pi}{2}$
+\end{itemize}
+
+\section*{3}
+\begin{itemize}
+    \item[a) ] $u = x^2+1 \\
+                du = 2xdx \\
+                \frac{1}{2} \int cos(u) du = \\
+                \frac{sin(u)}{2} + c = \\
+                \frac{1}{2} sin(x^2+1) + c$ 
+    \item[b) ] $u = 6x^3 + 5 \\
+                du = 18x^2dx \\
+                \int 18x^2 \sqrt[4]{6x^3+5}dx = \\ 
+                \int (6x^3+5)^{\frac{1}{4}}(18x^2dx) = \\
+                \int u^{\frac{1}{4}}du = \\
+                \frac{4}{5} u^{\frac{5}{4}}+c = \\
+                \frac{4}{5}(6x^3+5)^{\frac{5}{4}}+c$ 
+    \item[c) ] $\frac{2^{x^3+1}}{ln 8} + C$ 
+\end{itemize}
+
+
+
+\section*{4}
+Om vi kikar på integralen som ges på s. 368: $\int_a^b f(x) dx$, så är: \\
+a = 0, b = $\pi$, $f(x) = sin(x)$, $x_i = a+ih$\\\\
+
+\noindent
+a) \\
+\noindent
+$n = 10 \Rightarrow h = \frac{b-a}{n} = \frac{\pi}{10}$ och 
+
+\begin{tabular}{l|l*{6}{c}} \\
+$i$     & 0 & 1 & 2 & 3 & ...  & 9 & 10 \\
+\hline
+$x_i$   & 0 & $\frac{\pi}{10}$ & $\frac{2 \pi}{10}$ & $\frac{3 \pi}{10}$ & 
+        ... & $\frac{9 \pi}{10}$ & $\frac{10 \pi}{10}$  \\
+        [5pt]
+$f_i$   & $sin(0)$ & $sin(\frac{\pi}{10})$ & $sin(\frac{2 \pi}{10})$ & 
+        $sin(\frac{3 \pi}{10})$ & ... & $sin(\frac{9 \pi}{10})$ & 
+        $sin(\frac{10 \pi}{10})$ \\
+\end{tabular}\\\\
+[20pt]
+$\int_0^{\pi} sin(x) dx \approx \frac{h}{2}[f_0 + 2f_1 + 2f_2 + 2f_3 + ... + 2f_9 + f_{10}]
+ = 1.983 523 538$\\\\
+Error = $0.824\%$\\\\
+\noindent
+b) \\
+\noindent
+$n = 20 \Rightarrow h = \frac{\pi}{20}$\\\\
+$\int_0^{\pi} sin(x) dx \approx \frac{h}{2}[f_0 + 2f_1 + 2f_2 + 2f_3 + ... + 2f_{19} + f_{20}]
+= 1.995 885 973$\\\\
+Error = $0.206\%$
+
+
+\section*{5}
+$\frac{\pi}{5}$ cu. units
+
+\clearpage
+\section*{6}
+\begin{itemize}
+	\item[a) ] $y = \frac{4}{3} \> x$, där x går från 0 till 3. \\
+			 Här får vi en vanlig triangel med basen 3 och höjden 4. Längden blir således 5, enl pythagoras. 
+			 
+	\item[b) ] 	$y = \frac{2}{3} (x-1)^{ \frac{3}{2} }$, där x går från 0 till 4 \\
+				Här måste vi använda längdformeln. 
+				$ds = \sqrt{1 + f'(x)^2}$ \\
+				$ds = \sqrt{1 + x-1} $ \\
+				$ds = \sqrt{x} $ \\
+				$L = \int_{0}^{4} ds = \int_{0}^{4} \sqrt{x} dx $ \\
+				$L =  2/3 ( 4^{3/2} - 0^{3/2} ) = 2/3 * 8 = 16/3 $
+\end{itemize}
+\end{document}

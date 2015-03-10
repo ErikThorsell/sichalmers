@@ -1,0 +1,137 @@
+%SI 2014-09-05
+
+\documentclass{article}
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[swedish]{babel}
+\usepackage{fullpage}
+\usepackage{amssymb}
+\usepackage{bussproofs}
+\usepackage{amsmath}
+\usepackage{wrapfig}
+\usepackage{float}
+\usepackage{graphicx}
+\usepackage{verbatim}
+\usepackage{tikz}
+\let\emptyset\varnothing
+
+
+\title{Supplemental Instructions}
+\date{
+      %Place date here!
+     }
+
+\begin{document}
+\maketitle
+
+
+\section*{1}
+Separabel\\
+$\frac{dy}{dx} = \frac{x}{y}$\\
+$y dy = x dx$\\
+$\frac{y^2}{2} = \frac{x^2}{2} + C$\\\\
+$y(1) = 2 \Rightarrow 2 = \frac{1}{2} + C \Rightarrow C = \frac{3}{2}$\\\\
+$y^2 = x^2+3$\\
+$y = \sqrt{x^2+3}$\\
+
+\section*{2}
+$y' - y = 2xe^x$\\
+Integrerande faktor: $e^{-x}$\\\\
+$e^{-x}y' - e^{-x}y=2x$\\
+$(e^{-x}y)' = 2x$\\
+$e^{-x}y = x^2+C$\\\\
+$y(0) = 1 \Rightarrow C = 1$\\
+$y = x^2e^x+e^x$\\
+
+\section*{3}
+$y''+y = x$\\
+Kar. ekv: $r^2+1 = 0 \Rightarrow r = \pm i$\\\\
+Homogenlösning: $y = A*cos(x) + B*sin(x)$\\
+Partikulärlösning: $y = x$, $y''=0$\\\\
+$y = x + A*cos(x) + B*sin(x)$\\
+$y' = 1 - A*sin(x) + B*cos(x)$\\\\
+$y(0) = y'(0) = 0 \Rightarrow A = 0, 1-B = 0$\\\\
+$y = x + sin(x)$\\
+
+\section*{4}
+$y''-3y'+2y = sin(2x)$\\
+Kar. ekv: $r^2-3r+2=0 \Rightarrow r_1 = 2, r_2 = 1$\\\\
+Homogenlösning: $y = Ae^{2x} + Be^x$\\
+Partikulärlösning: \\
+$y = Acos(2x) + Bsin(2x)$\\
+$y' = -2Asin(2x) + 2Bcos(2x)$\\
+$y'' = -4Acos(2x) - 4Bsin(2x)$\\\\
+$y''-3y'+2y = cos(2x)(-4A - 6B + 2A) + sin(2x)(-4B + 6A + 2B)$\\\\
+$\left\{
+    \begin{array}{l}
+        -2A - 6B = 0\\
+        -2B + 6A = 1
+    \end{array}\right.$\\\\
+$A = -3B$\\
+$-B - 9B = \frac{1}{2}$\\
+$B = -\frac{1}{20}$\\
+$A = \frac{3}{20}$\\\\
+Lösning:\\
+$y = \frac{3}{20}cos(2x) - \frac{1}{20}sin(2x) + A e^{2x}+Be^x$\\
+$y' = -\frac{3}{10}sin(2x) - \frac{1}{10} cos(2x) + 2Ae^{2x} + Be^x$\\\\
+$y(0) = y'(0) \Rightarrow$\\
+$\frac{3}{20} + A + B = 0$\\
+$- \frac{1}{10} + 2A + B = 0$\\
+$A = \frac{5}{20} = \frac{1}{4}$\\
+$B = - \frac{8}{20} = - \frac{2}{5}$\\\\
+Svar: $y=\frac{3}{20}cos(2x)-\frac{1}{20}sin(2x)+\frac{1}{4}e^{2x}-\frac{2}{5}e^x$
+
+\section*{5}
+Skivformeln ger:\\
+$\int_{0}^{2} \pi (e^x\sqrt{x})^2 dx = $\\
+$\pi \int_0^2 x*e^{2x}dx = $\\
+$[\text{partiell integration}]$\\
+$\pi [\frac{x*e^{2x}}{2}]_0^2 - \pi \int_0^2 \frac{e^{2x}}{2}dx = $\\
+$\pi(e^4-0-\frac{e^4}{4+}\frac{1}{4}) = $\\
+$\pi(\frac{1}{4} + \frac{3e^4}{4})$
+
+\section*{6}
+Om vi vrider $8-6i$ $90^{\circ}$ får vi $i(8-6i) = 8i+6 = 2(3+4i)$ vilket är 
+parallellt med $(3+4i)$.\\\\
+\noindent
+Alternativt kan vi använda omvändningen av Pythagoras sats:\\
+$\text{Hypotenusan}^2 = |8-6i - (3+4i)|^2 = |5-10i|^2 = 125 = $\\
+$(64+36) + (9+16) = |8-6i|^2 + |3+4i|^2$
+
+\section*{7}
+Om $v(t)$ är hastigheten har vi $v' = -k \sqrt(v)$, $v(0) = v_0$.\\
+$\frac{dv}{\sqrt{v}} = -k dt$\\
+$2 \sqrt{v} = -kt + C$\\\\
+$t=0 \text{ ger } C = 2\sqrt{v_0}$\\
+$2\sqrt{v} = 2\sqrt{v_0} - kt = 0$\\
+för $ t = \frac{2\sqrt{v_0}}{k}$\\
+
+\section*{8}
+Eulers metod är: $y_{k+1} - y_k = h({x_k}^2 + {y_k}^2)$\\\\
+$y(0) = 0$\\
+$y(\frac{1}{2}) = 0 + \frac{1}{2}(0^2 + 0^2) = 0$\\
+$y(1) = 0 + \frac{1}{2}({\frac{1}{2}}^2 + 0^2) = \frac{1}{8}$\\\\
+Svar: $0, 0, \frac{1}{8}$
+
+
+%UPPGIFT 9%
+\subsection*{9}
+$y^2 = 1 + \int_{1}^{x} {y^3 dt}$ \\
+Tricket här är analysens andra fundamentalsats: 
+$\frac{d}{dx} \int_{c}^{x} {f(t) dt} = f(x)$ \\\\
+Derivera båda sidorna:
+$2y(x) y' = y(x)^3$ \\
+Nu behöver vi separera: $2y(x) \frac{dy}{dx} = y(x)^3$ \\ 
+$\frac{1}{y(x)^{2}} \frac{dy}{dx} = \frac{1}{2}$ \\ 
+$\frac{1}{y(x)^{2}} \> dy = \frac{1}{2} \> dx$ \\ 
+$-\frac{1}{y} = \frac{x}{2} + c$ \\
+$\frac{1}{y} = -\frac{x+c}{2} $ \\
+$y = -\frac{2}{x+c} $ \\\\
+C kan vi beräkna från orginalekvationen. Vi väljer något x så att integralen blir enkel. I det här fallet passar x=1 bra. \\ 
+$(-\frac{2}{1+c})^2 = 1 + \int_{1}^{1} {y^3 dt}$ \\\\
+$\frac{4}{(1+c)^2} = 1 + 0$ \\
+Vi ser här att c=1 uppfyller kravet. \\
+$y = -\frac{2}{x+1} $ \\
+
+\end{document}

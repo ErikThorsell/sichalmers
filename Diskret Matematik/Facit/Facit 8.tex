@@ -1,0 +1,153 @@
+%SI 2014-09-05
+
+\documentclass{article}
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[swedish]{babel}
+\usepackage{fullpage}
+\usepackage{amssymb}
+\usepackage{bussproofs}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage{verbatim}
+\usepackage{tikz}
+\let\emptyset\varnothing
+
+
+\title{Supplemental Instructions}
+\author{Erik Thorsell \\ 
+		\small{erithor@student.chalmers.se}
+}
+\date{2015-10-22}
+
+\begin{document}
+\maketitle
+
+\section*{Tentakött!}
+
+\begin{enumerate}
+
+\item[1.]
+\begin{itemize}
+    \item[a)] Antalet grafer sammanfaller med antalet sätt att välja ut $k$ 
+              stycken bland alla de $\binom{n}{2}$ paren av element man kan
+              bilda från V. Svaret blir således: $$\binom{\binom{n}{2}}{k}$$
+    \item[b)] Här handlar det om antalet sätt de n noderna kan delas in i två
+              grupper. Låt oss kalla dem ``de röda noderna'' och ``de blå
+              noderna''. För varje nod finns det två alternativ, blå eller röd,
+              så enligt multiplikationsprincipen finns det $2^n$ olika sätt att
+              dela in noderna i röda och blå noder. Dock gäller det att varje
+              fullständig bipartit graf kan uppkomma från precis två sådana
+              uppdelningar, vilka fås från varandra genom att kalla alla blå
+              noder röda och vice versa. Således är antalet fullständiga -
+              bipartita - grafer $2^{n-1}$.
+    \item[c)] Varje n-väg svarar mot precis en permutation av de n noderna
+              varför det finns precis $n!$ stycken n-vägar.
+    \item[d)] Varje n-väg svarar mot precis n stycken n-väga (ty det finns
+              precis n ställen där en cykel kan ``klippas av'' och bilda en
+              väg), varför svaret blir: $$\frac{n!}{n} = (n-1)!$$\\
+\end{itemize}
+
+\item[2.]
+    Kalla högerledet $f(n)$, dvs $f(n)=n^8+6n^3+4$. Eftersom 21 kan skrivas som
+    produkten av två primtal (7 och 3) gäller att $21|f(n)$ om och endast om
+    $3|f(n)$ och $7|f(n)$. Detta kan skrivas om som: $f(n) \equiv 0 \text{
+    modulo } 3$ och $f(n) \equiv 0 \text{ modulo } 7$. Vid räkning i 
+    $\mathbb{Z}_7$ gäller att $f(n) = n^8+6n^3+4 = n^2-n^3+4$.
+    $$f(0) = 4$$
+    $$f(1) = 4$$
+    $$f(2) = 0$$
+    $$f(3) = 0$$
+    $$f(4) = 4$$
+    $$f(5) = 2$$
+    $$f(6) = 6$$
+    Vi ser att att $f(n) \equiv 0 \text{ mod } 7$ omm $n \equiv 2$ eller $n \equiv 3
+    \text{ mod } 7$. Vid räkning i $\mathbb{Z}_3$ gäller att $f(n)=1-n^5+4=5-n-2=2-n$
+    varför $f(n) \equiv 0 \text{ mod } 3$ omm $n \equiv 2 \text{ mod } 3$.\\
+    Summa summarum gäller alltså att $21|f(n)$ gäller då:
+    \[\left\{
+        \begin{array}{lr}
+            n \equiv 2 \text{ mod } 3\\
+            n \equiv 2 \text{ mod } 7
+        \end{array}
+    \right.\]
+    eller
+    \[\left\{
+        \begin{array}{lr}
+            n \equiv 2 \text{ mod } 3\\
+            n \equiv 3 \text{ mod } 7
+        \end{array}
+    \right.\]
+
+    En lösning till ekvationssytemet är att $n=2$ så enligt kinesiska
+    restsatsen gäller att den allmänna lösningen är $n=2+21m$, $m \in
+    \mathbb{Z}$. Till det andra ekvationssystemet är $n=17$ en lösning så den
+    allmänna lösningen är $n=17+21m$, $m \in \mathbb{Z}$. De $n$ vi söker är
+    alltså de $n$ som kan skrivas som $2+21m$ eller $17+21m$ där m är något
+    heltal.\\
+
+\item[3.]
+\begin{itemize}
+    \item[a)] Först väljer vi ut bollarna till urna 1. Detta kan ske på
+              $\binom{n}{k}$ olika sätt. Bland de återstående $n-k$ bollarna
+              väljs sedan $l$ bollar ut till urna 2. Detta kan ske på
+              $\binom{n-k}{l}$ olika sätt. Till sist finns det bara ett val;
+              att lägga de återstående $n-k-l=m$ bollarna i urna 3. Enligt
+              multiplikationsprincipen finns totalt: $$\binom{n}{k}
+              \binom{n-k}{l} = \frac{n!}{k! l! m!}$$ sätt att placera ut
+              bollarna.
+    \item[b)] $A(k,l,m)$ är antalet sätt att välja ut $k$ parenteser att plocka
+              $a$ ur, $l$ parenteser att plocka $b$ ur och $m$ parentser att
+              plocka $c$ ur. Genom att associera $a$ med urna 1, $b$ med urna 2
+              och $c$ med urna 3 i uppgift (a) kan man efter lite
+              tankegymnastik komma fram till att $A(k,l,m)$ blir just svaret i
+              (a).\\
+\end{itemize}
+
+\item[4.]
+    Använd induktion. Uppgiftens påstående är uppenbart sant då $n=1$ så antag
+    att det gäller även för $n=m$ där $m$ är ett godtyckligt valt positivt
+    heltal. Antagandet säger att precis hälften av följderna av längd $m$
+    innehåller ett udda antal ettor. Därför måste också precis hälften av
+    följderna innehålla ett jämt antal ettor. Nu är ju antalet följder av läng
+    $m+1$ med ett udda antal ettor dels de som börjar med en etta och följd av
+    en följd mav längd $m$ med ett jämt antal ettor, dels de som börjar med en
+    nolla och följs av en följd av längd $m$ med ett udda antal ettor. Summerar
+    vi dessa två antal får vi $2^{m-1}+2^{m-1} = 2^m$ och det önskade
+    resultatet följer av induktionsprincipen.\\\\
+
+\item[5.]
+    $f_1=1=\sqrt{1}$ så om vi under antagandet $f_n = \sqrt{n}$ för ett givet
+    $n$ kan visa att $f_{n+1}=\sqrt{n+1}$ följer det önskade resultatet av
+    induktionsprincipen. Men detta är rättframt: $$f_{n+1} = \sqrt{1+f_{n}^2} =
+    \sqrt{1+\sqrt{n}^2} = \sqrt{n+1}$$\\
+
+\item[6.]
+    Uppenbarligen är $f_1=3$. För att bilda en rekursiv formel, antag att vi
+    känner till $f_{n-1}$ för ett givet $n$. Av varje godkänd följd av läng
+    $n-1$ kan man bilda en följd av längd $n$ genom att sätta en av siffrorna
+    1, 2, eller 3 omedelbart före följden. På detta sätt kan man bilda
+    $3f_{n-1}$ olika följder.\\
+    Nu är inte alla dessa godkända, nämligen de följder som man får genom att
+    ta en ``längd-$n-1$-följd'' som börjar med en tvåa och sätta en etta
+    framför. Antalet sådana är $f_{n-2}$ ty med en tvåa i början bildar man en
+    godkänd följd genom att sätta vilken godkänd följd som helst efter denna
+    tvåa. Den korrekta rekursiva formeln blir alltså:
+    $$f_{n-3}-f_{n-1}-f_{n-2}$$ med startvärdet $f_1=3$.\\
+
+\item[7.]
+    Relationen är $R$ är ingen ekvivalensrelation, ty den är inte transitiv.
+    Att $x$ är granne med $y$ och $y$ är granne med $z$ garanterar inte att $x$
+    och $z$ är grannar.\\
+    Inte heller $T$ är en ekvivalensrelation, den är till exempel inte
+    symmetrisk. Om $d_x=1$ och $d_y=2$ gäller ju att $xTy$ men inte
+    $yTx$.\\
+    Relationen $S$ är däremot en ekvivalensrelation. Varje nod är naturligtvis
+    samma komponent som sig själv, och om det finns en väg från $x$ till $y$ så
+    finns det en väg från $y$ till $x$. Den är transitiv för att om det finns
+    en väg från $x$ till $y$ och en väg från $y$ till $z$ så finns där en väg
+    från $x$ till $z$ via $y$.\\
+
+\end{enumerate}
+\end{document}
